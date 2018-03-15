@@ -23,11 +23,14 @@ public class User {
     @Column(name = "email")
     private String email;
 
+/*
     @Enumerated(EnumType.STRING)
-    private Gender gender;
+*/
+    @Column(name = "gender")
+    private String gender;
 
     @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="a_id")
+    @JoinColumn(name="answer")
     private Answer answer;
 
 }

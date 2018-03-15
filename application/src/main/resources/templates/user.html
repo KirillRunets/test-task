@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>User registration</title>
+</head>
+<body>
+    <form id="register-form" method="POST">
+        <p><input type="text" id="firstName" name="firstName" placeholder="Input first name"/></p>
+        <p><input type="text" id="secondName" name="secondName"  placeholder="Input second name"/></p>
+        <p><input type="email" id="email" name="email"  placeholder="Input email"/></p>
+        <p><input type="text" id="gender" name="gender"  placeholder="Input gender"/></p>
+        <input value="Submit" type="submit" onclick="submitUserForm()"/>
+    </form>
+    <script src="webjars/jquery/3.3.1-1/jquery.js"></script>
+    <script type="text/javascript" th:src="@{/js/user.js}"></script>
+</body>
+</html>
