@@ -16,11 +16,8 @@ public class Answer {
     @Column(name = "a_id")
     private int id;
 
-    @Column(name = "body")
-    private String body;
-
-    @Column(name = "voting_amount")
-    private int votingAmount;
+    @Column(name = "description")
+    private String description;
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="q_id")

@@ -1,4 +1,6 @@
 package by.runets.voting.service;
 
-public interface UserService {
+import by.runets.voting.dto.UserDTO;
+
+public interface UserService extends AbstractService<UserDTO, Integer> {
 }
