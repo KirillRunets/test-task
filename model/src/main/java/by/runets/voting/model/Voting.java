@@ -14,9 +14,6 @@ public class Voting {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @Column(name = "voting_time")
-    private Instant votingTime;
-
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="u_id")
     private List<User> users;
