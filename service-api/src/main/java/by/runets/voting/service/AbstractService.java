@@ -1,5 +1,7 @@
 package by.runets.voting.service;
 
+import by.runets.voting.exception.ResourceNotFoundException;
+
 import java.util.List;
 
 public interface AbstractService <T, K> {
@@ -9,5 +11,5 @@ public interface AbstractService <T, K> {
 
     void save(T entity);
 
-    void delete(K id);
+    void delete(K id) throws ResourceNotFoundException;
 }

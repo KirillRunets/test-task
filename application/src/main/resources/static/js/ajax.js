@@ -16,3 +16,7 @@ function submitUserForm() {
         contentType : "application/json"
     });
 }
+
+function submitQuestionForm() {
+
+}

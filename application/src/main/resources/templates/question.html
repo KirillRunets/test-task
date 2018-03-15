@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create question for voting</title>
+</head>
+<body>
+    <form id="question-form" method="post">
+        <p><input type="text" id="description" name="firstName" placeholder="Input question"/></p>
+        <p><input type="text" id="answer" name="answer" placeholder="Input answer"/></p>
+        <input value="Add answer" type="button" onclick="createAnswer()"/>
+        <input value="Submit" type="submit" onclick="submitUserForm()"/>
+    </form>
+    <ul id="ul-id">
+    </ul>
+    <script src="webjars/jquery/3.3.1-1/jquery.js"></script>
+    <script type="text/javascript" th:src="@{/js/form.js}"></script>
+    <script type="text/javascript" th:src="@{/js/ajax.js}"></script>
+</body>
+</html>

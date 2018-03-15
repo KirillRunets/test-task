@@ -23,11 +23,9 @@ public class User {
     @Column(name = "email")
     private String email;
 
-/*
     @Enumerated(EnumType.STRING)
-*/
-    @Column(name = "gender")
-    private String gender;
+    @Column(name = "gender", columnDefinition = "enum('MALE', 'FEMALE')")
+    private Gender gender;
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="answer")

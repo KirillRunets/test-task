@@ -1,6 +1,5 @@
 package by.runets.voting.controller;
 
-
 import by.runets.voting.dto.UserDTO;
 import by.runets.voting.service.UserService;
 import lombok.RequiredArgsConstructor;

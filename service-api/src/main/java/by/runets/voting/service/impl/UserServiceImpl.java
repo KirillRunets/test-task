@@ -5,6 +5,7 @@ import by.runets.voting.model.User;
 import by.runets.voting.repository.UserRepository;
 import by.runets.voting.service.UserService;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ import java.util.List;
 
 
 @Service
-@Data
+@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;

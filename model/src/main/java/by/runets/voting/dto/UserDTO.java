@@ -10,5 +10,5 @@ public class UserDTO {
     private String secondName;
     private String email;
     private AnswerDTO answer;
-    private String gender;
+    private Gender gender;
 }
