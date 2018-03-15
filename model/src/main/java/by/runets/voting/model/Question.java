@@ -11,17 +11,15 @@ import java.util.List;
 public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "q_id")
     private int id;
 
-    @Column(name = "theme")
-    private String theme;
+    @Column(name = "description")
+    private String description;
 
     @Column(name = "enabled")
     private boolean enabled;
 
     @OneToMany(mappedBy = "question")
     List<Answer> answers;
-
-    @OneToMany(mappedBy = "questions")
-    private Voting voting;
 }

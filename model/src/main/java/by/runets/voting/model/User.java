@@ -11,6 +11,7 @@ import javax.persistence.*;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "u_id")
     private int id;
 
     @Column(name = "first_name")
@@ -25,6 +26,8 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    @OneToMany(mappedBy = "users")
-    private Voting voting;
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="a_id")
+    private Answer answer;
+
 }
