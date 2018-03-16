@@ -5,7 +5,7 @@ import by.runets.voting.exception.ResourceNotFoundException;
 import java.util.List;
 
 public interface AbstractService <T, K> {
-    T find(K id);
+    T find(K id) throws ResourceNotFoundException;
 
     List<T> findAll();
 

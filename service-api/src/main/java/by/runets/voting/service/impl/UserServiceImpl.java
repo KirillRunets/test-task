@@ -1,6 +1,8 @@
 package by.runets.voting.service.impl;
 
 import by.runets.voting.dto.UserDTO;
+import by.runets.voting.exception.ResourceNotFoundException;
+import by.runets.voting.model.Question;
 import by.runets.voting.model.User;
 import by.runets.voting.repository.UserRepository;
 import by.runets.voting.service.UserService;
@@ -14,6 +16,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.lang.reflect.Type;
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -47,6 +50,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void delete(Integer id) {
+    public void delete(Integer id) throws ResourceNotFoundException {
+        Optional<User> user = userRepository.findById(id);
+
+        if (!user.isPresent()){
+            throw new ResourceNotFoundException("Cannot delete user by id: " + id);
+        }
+
+        userRepository.delete(user.get());
+
     }
 }
